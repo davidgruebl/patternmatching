@@ -1,4 +1,5 @@
 node_modules
 .DS_STORE
-build
-npm-debug.log
+app/*
+!app/index.html
+*.log

@@ -2,7 +2,7 @@
 
 set -e
 
-git add -f build
+git add -f app
 git commit -m 'deploy'
-git push origin `git subtree split --prefix build master`:gh-pages --force
+git push origin `git subtree split --prefix app master`:gh-pages --force
 git reset HEAD^

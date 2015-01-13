@@ -29,17 +29,28 @@
   },
   "browser": {
     "tracking": "./node_modules/tracking.js/build/tracking.js",
-    "face": "./node_modules/tracking.js/build/data/face-min.js",
-    "eye": "./node_modules/tracking.js/build/data/eye-min.js",
-    "mouth": "./node_modules/tracking.js/build/data/mouth-min.js"
+    "face": "./node_modules/tracking.js/build/data/face.js",
+    "eye": "./node_modules/tracking.js/build/data/eye.js",
+    "mouth": "./node_modules/tracking.js/build/data/mouth.js"
 
   },
   "browserify-shim": {
     "tracking": "tracking",
-    "face": "face",
-    "eye": "eye",
-    "mouth": "mouth"
-
+    "face": {
+      "depends": [
+        "tracking"
+      ]
+    },
+    "eye": {
+      "depends": [
+        "tracking"
+      ]
+    },
+    "mouth": {
+      "depends": [
+        "tracking"
+      ]
+    }
   },
   "browserify": {
     "transform": [
