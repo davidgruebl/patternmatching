@@ -1,0 +1,49 @@
+{
+  "name": "templatematching",
+  "version": "1.0.0",
+  "description": "templatematching in js",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidgruebl/templatematching.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidgruebl/templatematching/issues"
+  },
+  "homepage": "https://github.com/davidgruebl/templatematching",
+  "scripts": {
+    "build": "browserify index.js -o app/bundle.js",
+    "watch": "watchify index.js -o app/bundle.js",
+    "start": "static app",
+    "install": "npm run build"
+  },
+  "dependencies": {
+    "jquery": "^2.1.1",
+    "tracking.js": "git://github.com/eduardolundgren/tracking.js"
+  },
+  "devDependencies": {
+    "browserify": "^6.3.4",
+    "browserify-shim": "^3.8.0",
+    "node-static": "^0.7.6",
+    "watchify": "^2.1.1"
+  },
+  "browser": {
+    "tracking": "./node_modules/tracking.js/build/tracking.js",
+    "face": "./node_modules/tracking.js/build/data/face-min.js",
+    "eye": "./node_modules/tracking.js/build/data/eye-min.js",
+    "mouth": "./node_modules/tracking.js/build/data/mouth-min.js"
+
+  },
+  "browserify-shim": {
+    "tracking": "tracking",
+    "face": "face",
+    "eye": "eye",
+    "mouth": "mouth"
+
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}
